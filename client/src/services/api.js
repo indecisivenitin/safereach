@@ -1,7 +1,4 @@
 
-
-
-
 // import axios from 'axios';
 
 // const api = axios.create({
@@ -59,6 +56,7 @@
 // export const authService = {
 
 //   // Registration with webcam selfie
+//   // and Aadhaar support
 //   register: (data) =>
 //     api.post(
 //       '/auth/register',
@@ -131,12 +129,15 @@
 // // =========================
 // export const volunteerService = {
 
-//   updateLocation: (data) =>
-//     api.patch(
-//       '/volunteers/location',
-//       data
-//     ),
+//  updateLocation: async (data) => {
 
+//   const response = await api.put(
+//     '/volunteers/location',
+//     data
+//   );
+
+//   return response.data;
+// },
 //   toggleStatus: (isActive) =>
 //     api.patch(
 //       '/volunteers/status',
@@ -171,16 +172,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 import axios from 'axios';
 
 const api = axios.create({
@@ -196,14 +187,10 @@ const api = axios.create({
 // =========================
 api.interceptors.request.use(
   (config) => {
-    const token =
-      localStorage.getItem('token');
-
+    const token = localStorage.getItem('token');
     if (token) {
-      config.headers.Authorization =
-        `Bearer ${token}`;
+      config.headers.Authorization = `Bearer ${token}`;
     }
-
     return config;
   }
 );
@@ -213,20 +200,12 @@ api.interceptors.request.use(
 // =========================
 api.interceptors.response.use(
   (res) => res,
-
   (error) => {
-    if (
-      error.response?.status === 401
-    ) {
+    if (error.response?.status === 401) {
       localStorage.removeItem('token');
-
-      window.location.href =
-        '/login';
+      window.location.href = '/login';
     }
-
-    return Promise.reject(
-      error.response?.data || error
-    );
+    return Promise.reject(error.response?.data || error);
   }
 );
 
@@ -237,19 +216,10 @@ export default api;
 // =========================
 export const authService = {
 
-  // Registration with webcam selfie
-  // and Aadhaar support
   register: (data) =>
-    api.post(
-      '/auth/register',
-      data,
-      {
-        headers: {
-          'Content-Type':
-            'multipart/form-data',
-        },
-      }
-    ),
+    api.post('/auth/register', data, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    }),
 
   login: (data) =>
     api.post('/auth/login', data),
@@ -261,12 +231,7 @@ export const authService = {
     api.put('/auth/me', data),
 
   updateFcmToken: (token) =>
-    api.patch(
-      '/auth/fcm-token',
-      {
-        fcmToken: token,
-      }
-    ),
+    api.patch('/auth/fcm-token', { fcmToken: token }),
 };
 
 // =========================
@@ -277,30 +242,23 @@ export const alertService = {
   create: (data) =>
     api.post('/alerts', data),
 
+  getById: (id) =>
+    api.get(`/alerts/${id}`),   // ← ADDED
+
   getMy: (params) =>
-    api.get('/alerts/my', {
-      params,
-    }),
+    api.get('/alerts/my', { params }),
 
   accept: (id) =>
-    api.put(
-      `/alerts/${id}/accept`
-    ),
+    api.put(`/alerts/${id}/accept`),
 
   decline: (id) =>
-    api.put(
-      `/alerts/${id}/decline`
-    ),
+    api.put(`/alerts/${id}/decline`),
 
   resolve: (id) =>
-    api.put(
-      `/alerts/${id}/resolve`
-    ),
+    api.put(`/alerts/${id}/resolve`),
 
   cancel: (id) =>
-    api.put(
-      `/alerts/${id}/cancel`
-    ),
+    api.put(`/alerts/${id}/cancel`),
 
   getNearby: () =>
     api.get('/alerts/nearby'),
@@ -311,28 +269,19 @@ export const alertService = {
 // =========================
 export const volunteerService = {
 
- updateLocation: async (data) => {
+  updateLocation: async (data) => {
+    const response = await api.put('/volunteers/location', data);
+    return response.data;
+  },
 
-  const response = await api.put(
-    '/volunteers/location',
-    data
-  );
-
-  return response.data;
-},
   toggleStatus: (isActive) =>
-    api.patch(
-      '/volunteers/status',
-      { isActive }
-    ),
+    api.patch('/volunteers/status', { isActive }),
 
   getStats: () =>
     api.get('/volunteers/stats'),
 
   getLeaderboard: () =>
-    api.get(
-      '/volunteers/leaderboard'
-    ),
+    api.get('/volunteers/leaderboard'),
 };
 
 // =========================
@@ -344,7 +293,5 @@ export const reviewService = {
     api.post('/reviews', data),
 
   getForVolunteer: (id) =>
-    api.get(
-      `/reviews/volunteer/${id}`
-    ),
+    api.get(`/reviews/volunteer/${id}`),
 };
