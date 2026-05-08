@@ -1,0 +1,88 @@
+.
+├── client
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package.json
+│   ├── postcss.config.js
+│   ├── public
+│   │   ├── favicon.svg
+│   │   └── icons.svg
+│   ├── README.md
+│   ├── src
+│   │   ├── App.jsx
+│   │   ├── assets
+│   │   │   ├── hero.png
+│   │   │   ├── react.svg
+│   │   │   └── vite.svg
+│   │   ├── components
+│   │   │   ├── BottomNav.jsx
+│   │   │   ├── common
+│   │   │   │   ├── ProtectedRoute.jsx
+│   │   │   │   └── RoleRoute.jsx
+│   │   │   ├── LiveMap.jsx
+│   │   │   ├── LoadingScreen.jsx
+│   │   │   └── SOSButton.jsx
+│   │   ├── context
+│   │   │   ├── AlertContext.jsx
+│   │   │   ├── AuthContext.jsx
+│   │   │   └── SocketContext.jsx
+│   │   ├── hooks
+│   │   │   ├── useGeolocation.js
+│   │   │   └── useLocationBroadcast.js
+│   │   ├── index.css
+│   │   ├── main.jsx
+│   │   ├── pages
+│   │   │   ├── auth
+│   │   │   │   ├── Login.jsx
+│   │   │   │   └── Register.jsx
+│   │   │   ├── volunteer
+│   │   │   │   ├── VolunteerHistory.jsx
+│   │   │   │   ├── VolunteerHome.jsx
+│   │   │   │   └── VolunteerProfile.jsx
+│   │   │   └── woman
+│   │   │       ├── ReviewPage.jsx
+│   │   │       ├── WomanAlertActive.jsx
+│   │   │       ├── WomanHistory.jsx
+│   │   │       ├── WomanHome.jsx
+│   │   │       └── WomanProfile.jsx
+│   │   └── services
+│   │       └── api.js
+│   ├── tailwind.config.js
+│   └── vite.config.js
+├── Project Architecture.txt
+└── server
+    ├── config
+    │   ├── db.js
+    │   └── firebase.js
+    ├── controllers
+    │   ├── alertController.js
+    │   ├── authController.js
+    │   ├── reviewController.js
+    │   └── volunteerController.js
+    ├── index.js
+    ├── logs
+    │   ├── combined.log
+    │   └── error.log
+    ├── middleware
+    │   ├── auth.js
+    │   ├── errorHandler.js
+    │   └── validate.js
+    ├── models
+    │   ├── Alert.js
+    │   ├── Review.js
+    │   └── User.js
+    ├── package.json
+    ├── readme.md
+    ├── routes
+    │   ├── alerts.js
+    │   ├── auth.js
+    │   ├── reviews.js
+    │   └── volunteers.js
+    ├── seed.js
+    ├── socket
+    │   └── index.js
+    └── utils
+        ├── AppError.js
+        ├── catchAsync.js
+        └── logger.js
+

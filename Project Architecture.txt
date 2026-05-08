@@ -1,0 +1,111 @@
+-----REGISTRATION FLOW-----
+
+User opens Register Page
+        ↓
+Enters:
+- Name
+- Email
+- Password
+- Captures Photo (Webcam)
+- Records Audio 
+        ↓
+Clicks "Register"
+        ↓
+Frontend sends data → Backend (multipart/form-data)
+        ↓
+Backend receives:
+- image (buffer)
+- audio (buffer)
+- user details
+        ↓
+Store TEMP data in PostgreSQL
+        ↓
+PostgreSQL / Backend → AI Model
+        ↓
+AI Response:
+   ├── TRUE (female)
+   └── FALSE  (not verified)
+        ↓
+
+IF TRUE:
+    → Store user in MongoDB
+    → Send success response
+    → Login user (JWT)
+
+IF FALSE:
+    → Reject registration
+    → Send error message
+
+
+
+
+
+
+
+
+-----LOGIN FLOW-----
+User enters email + password
+        ↓
+Frontend → Backend API
+        ↓
+Backend checks MongoDB
+        ↓
+If valid:
+    → Generate JWT token
+    → Send token to frontend
+        ↓
+Frontend stores token (sessionStorage)
+        ↓
+User logged in .
+
+
+
+
+
+
+---DATABASES-----
+DATABASE RESPONSIBILITY SPLIT
+
+PostgreSQL (AI Layer)
+- Stores:
+   image (BYTEA)
+   audio (BYTEA)
+   verification result
+   timestamps
+
+- Acts as:
+   "Verification Gateway"
+
+
+
+MongoDB (Final User DB)
+- Stores:
+   name
+   email
+   password
+   role (user/volunteer)
+   isVerified
+   
+   
+   
+   
+   
+----SOS FUNCTIONALITY-------
+User clicks "SOS"
+        ↓
+Frontend sends:
+- User ID
+- Location
+- Message (optional)
+        ↓
+Backend receives request
+        ↓
+Backend triggers real-time system
+   (WebSockets / Socket.io)
+        ↓
+All Volunteers receive alert:
+"Help needed at Location"
+        ↓
+Volunteers can respond
+        ↓
+Real-time chat / updates
