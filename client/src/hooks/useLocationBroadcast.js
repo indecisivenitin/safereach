@@ -68,58 +68,51 @@ const useLocationBroadcast = ({
 
     const broadcastLocation = () => {
 
-      navigator.geolocation.getCurrentPosition(
+  console.log("📍 Attempting location fetch...");
 
-        async (position) => {
+  navigator.geolocation.getCurrentPosition(
 
-          const coordinates = [
-            position.coords.longitude,
-            position.coords.latitude
-          ];
+    async (position) => {
 
-          // SOCKET LIVE UPDATE
+      console.log("✅ REAL GPS:", {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      });
 
-          emit(
-            'volunteer:location-update',
-            {
-              coordinates,
-              alertId
-            }
-          );
+      const coordinates = [
+        position.coords.longitude,
+        position.coords.latitude
+      ];
 
-          // SAVE TO DB
+      console.log(
+        "🚀 EMITTING volunteer:location-update",
+        coordinates
+      );
 
-          try {
-
-            // await volunteerService.updateLocation({
-            //   coordinates
-            // });
-
-          } catch (err) {
-
-            console.log(
-              'Location save failed:',
-              err.message
-            );
-          }
-        },
-
-        (err) => {
-
-          console.log(
-            'Location access error:',
-            err.message
-          );
-        },
-
+      emit(
+        'volunteer:location-update',
         {
-          enableHighAccuracy: true,
-          timeout: 10000,
-          maximumAge: 3000
+          coordinates,
+          alertId
         }
       );
-    };
+    },
 
+    (err) => {
+
+      console.log(
+        '❌ Location access error:',
+        err
+      );
+    },
+
+    {
+      enableHighAccuracy: true,
+      timeout: 10000,
+      maximumAge: 3000
+    }
+  );
+};
     // Immediate update
 
     broadcastLocation();

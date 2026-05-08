@@ -1,40 +1,72 @@
 
+// import {
+//   createContext,
+//   useContext,
+//   useReducer,
+//   useEffect
+// } from 'react';
 
-// import { createContext, useContext, useReducer, useEffect } from 'react';
 // import { useSocket } from './SocketContext';
 // import { useAuth } from './AuthContext';
+
 // import toast from 'react-hot-toast';
 
-// const AlertContext = createContext(null);
+// const AlertContext =
+//   createContext(null);
+
+// // =====================================================
+// // INITIAL STATE
+// // =====================================================
 
 // const initialState = {
+
 //   activeAlert: null,
+
 //   incomingAlert: null,
+
 //   acceptedAlert: null,
+
 //   volunteerLocation: null,
+
+//   volunteerPath: [],
+
 //   volunteerResponseMessage: null,
+
+//   volunteerProfile: null,
+
 //   status: 'idle',
 // };
 
-// const reducer = (state, action) => {
+// // =====================================================
+// // REDUCER
+// // =====================================================
+
+// const reducer = (
+//   state,
+//   action
+// ) => {
 
 //   switch (action.type) {
 
-//     // =====================================================
-//     // WOMAN ALERT CREATED
-//     // =====================================================
+//     // =================================================
+//     // ALERT CREATED
+//     // =================================================
 
 //     case 'ALERT_CREATED':
 
 //       return {
+
 //         ...state,
-//         activeAlert: action.payload,
+
+//         activeAlert:
+//           action.payload,
+
 //         status: 'searching'
 //       };
 
-//     // =====================================================
+//     // =================================================
 //     // ALERT ACCEPTED
-//     // =====================================================
+//     // =================================================
 
 //     case 'ALERT_ACCEPTED':
 
@@ -44,8 +76,15 @@
 
 //         status: 'active',
 
+//         volunteerProfile:
+//           action.payload.volunteer,
+
 //         volunteerResponseMessage:
-//           action.payload.responseMessage,
+//           action.payload.responseMessage || '',
+
+//         volunteerLocation:
+//           action.payload.volunteer?.location
+//             ?.coordinates || null,
 
 //         activeAlert: {
 
@@ -59,89 +98,122 @@
 //         }
 //       };
 
-//     // =====================================================
+//     // =================================================
+//     // VOLUNTEER LIVE LOCATION
+//     // =================================================
+
+//     case 'VOLUNTEER_LOCATION_UPDATE':
+
+//       return {
+
+//         ...state,
+
+//         volunteerLocation:
+//           action.payload,
+
+//         volunteerPath: [
+
+//           ...state.volunteerPath,
+
+//           action.payload
+//         ]
+//       };
+
+//     // =================================================
 //     // ALERT RESOLVED
-//     // =====================================================
+//     // =================================================
 
 //     case 'ALERT_RESOLVED':
 
 //       return {
+
 //         ...state,
+
 //         status: 'resolved'
 //       };
 
-//     // =====================================================
+//     // =================================================
 //     // ALERT CANCELLED
-//     // =====================================================
+//     // =================================================
 
 //     case 'ALERT_CANCELLED':
 
 //       return {
+
 //         ...state,
+
 //         activeAlert: null,
+
+//         acceptedAlert: null,
+
 //         volunteerLocation: null,
+
+//         volunteerPath: [],
+
+//         volunteerProfile: null,
+
 //         volunteerResponseMessage: null,
+
 //         status: 'idle'
 //       };
 
-//     // =====================================================
-//     // VOLUNTEER RECEIVED NEW ALERT
-//     // =====================================================
+//     // =================================================
+//     // VOLUNTEER RECEIVES ALERT
+//     // =================================================
 
 //     case 'INCOMING_ALERT':
 
 //       return {
+
 //         ...state,
-//         incomingAlert: action.payload
+
+//         incomingAlert:
+//           action.payload
 //       };
 
-//     // =====================================================
+//     // =================================================
 //     // CLEAR INCOMING
-//     // =====================================================
+//     // =================================================
 
 //     case 'CLEAR_INCOMING':
 
 //       return {
+
 //         ...state,
+
 //         incomingAlert: null
 //       };
 
-//     // =====================================================
-//     // VOLUNTEER ACCEPTED ALERT
-//     // =====================================================
+//     // =================================================
+//     // SET ACCEPTED ALERT
+//     // =================================================
 
 //     case 'SET_ACCEPTED':
 
 //       return {
+
 //         ...state,
-//         acceptedAlert: action.payload
+
+//         acceptedAlert:
+//           action.payload
 //       };
 
-//     // =====================================================
+//     // =================================================
 //     // CLEAR ACCEPTED
-//     // =====================================================
+//     // =================================================
 
 //     case 'CLEAR_ACCEPTED':
 
 //       return {
+
 //         ...state,
+
 //         acceptedAlert: null
 //       };
 
-//     // =====================================================
-//     // LIVE LOCATION
-//     // =====================================================
-
-//     case 'VOLUNTEER_LOCATION':
-
-//       return {
-//         ...state,
-//         volunteerLocation: action.payload
-//       };
-
-//     // =====================================================
+//     // =================================================
 //     // RESET
-//     // =====================================================
+//     // =================================================
 
 //     case 'RESET':
 
@@ -152,12 +224,19 @@
 //   }
 // };
 
-// export const AlertProvider = ({ children }) => {
+// // =====================================================
+// // PROVIDER
+// // =====================================================
 
-//   const [state, dispatch] = useReducer(
-//     reducer,
-//     initialState
-//   );
+// export const AlertProvider = ({
+//   children
+// }) => {
+
+//   const [state, dispatch] =
+//     useReducer(
+//       reducer,
+//       initialState
+//     );
 
 //   const {
 //     on,
@@ -174,11 +253,13 @@
 
 //     if (!user) return;
 
-//     // -----------------------------------------------------
+//     // ---------------------------------------------------
 //     // WOMAN: ALERT ACCEPTED
-//     // -----------------------------------------------------
+//     // ---------------------------------------------------
 
-//     const onAlertAccepted = (data) => {
+//     const onAlertAccepted = (
+//       data
+//     ) => {
 
 //       console.log(
 //         '✅ ALERT ACCEPTED:',
@@ -198,59 +279,75 @@
 //       );
 //     };
 
-//     // -----------------------------------------------------
-//     // WOMAN: LIVE LOCATION
-//     // -----------------------------------------------------
+//     // ---------------------------------------------------
+//     // LIVE VOLUNTEER LOCATION
+//     // ---------------------------------------------------
 
-//     const onVolunteerLocation = (data) => {
+//     const onVolunteerLocation =
+//       (data) => {
 
-//       dispatch({
-//         type: 'VOLUNTEER_LOCATION',
-//         payload: data.coordinates
-//       });
-//     };
+//         console.log(
+//           '📍 LIVE VOLUNTEER LOCATION:',
+//           data
+//         );
 
-//     // -----------------------------------------------------
-//     // WOMAN: ALERT RESOLVED
-//     // -----------------------------------------------------
+//         dispatch({
+//           type:
+//             'VOLUNTEER_LOCATION_UPDATE',
 
-//     const onAlertResolved = () => {
+//           payload:
+//             data.coordinates
+//         });
+//       };
 
-//       dispatch({
-//         type: 'ALERT_RESOLVED'
-//       });
+//     // ---------------------------------------------------
+//     // ALERT RESOLVED
+//     // ---------------------------------------------------
 
-//       toast.success(
-//         '✅ Help has arrived'
-//       );
-//     };
+//     const onAlertResolved =
+//       () => {
 
-//     // -----------------------------------------------------
-//     // WOMAN: ALERT CANCELLED
-//     // -----------------------------------------------------
+//         dispatch({
+//           type:
+//             'ALERT_RESOLVED'
+//         });
 
-//     const onAlertCancelled = () => {
+//         toast.success(
+//           '✅ Help has arrived'
+//         );
+//       };
 
-//       dispatch({
-//         type: 'ALERT_CANCELLED'
-//       });
+//     // ---------------------------------------------------
+//     // ALERT CANCELLED
+//     // ---------------------------------------------------
 
-//       toast(
-//         'Alert was cancelled',
-//         {
-//           icon: 'ℹ️'
-//         }
-//       );
-//     };
+//     const onAlertCancelled =
+//       () => {
 
-//     // -----------------------------------------------------
+//         dispatch({
+//           type:
+//             'ALERT_CANCELLED'
+//         });
+
+//         toast(
+//           'Alert was cancelled',
+//           {
+//             icon: 'ℹ️'
+//           }
+//         );
+//       };
+
+//     // ---------------------------------------------------
 //     // VOLUNTEER: NEW ALERT
-//     // -----------------------------------------------------
+//     // ---------------------------------------------------
 
-//     const onNewAlert = (data) => {
+//     const onNewAlert = (
+//       data
+//     ) => {
 
 //       if (
-//         user.role !== 'volunteer'
+//         user.role !==
+//         'volunteer'
 //       ) return;
 
 //       console.log(
@@ -259,7 +356,9 @@
 //       );
 
 //       dispatch({
-//         type: 'INCOMING_ALERT',
+//         type:
+//           'INCOMING_ALERT',
+
 //         payload: data
 //       });
 
@@ -280,27 +379,29 @@
 //       ]);
 //     };
 
-//     // -----------------------------------------------------
+//     // ---------------------------------------------------
 //     // VOLUNTEER: ALERT RESOLVED
-//     // -----------------------------------------------------
+//     // ---------------------------------------------------
 
-//     const onAlertResolvedForVolunteer = () => {
+//     const onAlertResolvedForVolunteer =
+//       () => {
 
-//       dispatch({
-//         type: 'CLEAR_ACCEPTED'
-//       });
+//         dispatch({
+//           type:
+//             'CLEAR_ACCEPTED'
+//         });
 
-//       toast.success(
-//         '✅ Woman confirmed help received. Thank you!',
-//         {
-//           duration: 5000
-//         }
-//       );
-//     };
+//         toast.success(
+//           '✅ Woman confirmed help received. Thank you!',
+//           {
+//             duration: 5000
+//           }
+//         );
+//       };
 
-//     // -----------------------------------------------------
+//     // =================================================
 //     // SOCKET LISTENERS
-//     // -----------------------------------------------------
+//     // =================================================
 
 //     on(
 //       'alert:accepted',
@@ -332,9 +433,9 @@
 //       onAlertResolvedForVolunteer
 //     );
 
-//     // -----------------------------------------------------
+//     // =================================================
 //     // CLEANUP
-//     // -----------------------------------------------------
+//     // =================================================
 
 //     return () => {
 
@@ -371,36 +472,31 @@
 
 //   }, [on, off, user]);
 
+//   // =====================================================
+//   // CONTEXT
+//   // =====================================================
+
 //   return (
+
 //     <AlertContext.Provider
 //       value={{
 //         ...state,
 //         dispatch
 //       }}
 //     >
+
 //       {children}
+
 //     </AlertContext.Provider>
 //   );
 // };
 
+// // =====================================================
+// // HOOK
+// // =====================================================
+
 // export const useAlert = () =>
 //   useContext(AlertContext);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -669,9 +765,15 @@ export const AlertProvider = ({
     ) => {
 
       console.log(
-        '✅ ALERT ACCEPTED:',
+        '✅ ALERT ACCEPTED (Woman Side):',
         data
       );
+
+      // ✅ FIX: Only woman receives this
+      if (user.role !== 'woman') {
+        console.log('User is not a woman, ignoring alert:accepted');
+        return;
+      }
 
       dispatch({
         type: 'ALERT_ACCEPTED',
@@ -752,13 +854,17 @@ export const AlertProvider = ({
       data
     ) => {
 
+      // ✅ FIX: Only volunteers receive this
       if (
         user.role !==
         'volunteer'
-      ) return;
+      ) {
+        console.log('User is not a volunteer, ignoring new-sos-alert');
+        return;
+      }
 
       console.log(
-        '🚨 NEW ALERT:',
+        '🚨 NEW ALERT (Volunteer):',
         data
       );
 

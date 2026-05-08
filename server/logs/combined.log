@@ -1271,3 +1271,605 @@
 2026-05-08 19:00:09 [[32minfo[39m]: Nitin Yadav marked ACTIVE
 2026-05-08 19:00:09 [[32minfo[39m]: Nitin Yadav marked ACTIVE
 2026-05-08 19:00:09 [[32minfo[39m]: Nitin Yadav marked INACTIVE
+2026-05-08 19:05:29 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 19:05:30 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-08 19:05:32 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [uvxHjiCZC5j-RfjvAAAD]
+2026-05-08 19:05:39 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 19:05:50 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [TamoPDUx9DDfwLxnAAAF]
+2026-05-08 19:06:49 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [qeHE2HMv6B6Vw_8kAAAH]
+2026-05-08 19:06:49 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:06:50 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:06:53 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 19:07:57 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-08 19:07:57 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [Fy9QQKKWYlRXsyAsAAAJ]
+2026-05-08 19:08:03 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 19:09:19 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [zxcYzByo2A0gEl0UAAAL]
+2026-05-08 19:09:33 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 19:09:33 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [uemCJ47DJeykp7QbAAAN]
+2026-05-08 19:09:33 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:09:33 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 19:09:33 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:09:33 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 19:09:33 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:09:41 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 19:10:13 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-08 19:10:13 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [CNCcDh2bEkCNb3kmAAAP]
+2026-05-08 19:10:13 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:10:15 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 19:10:16 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [_dNHKVEE72ZNln2pAAAS]
+2026-05-08 19:10:16 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:10:49 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:10:49 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 19:10:49 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:10:51 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 19:10:51 [[32minfo[39m]: khushali joined alert room: 69fde7e2a28f0c1cbe8a49ca
+2026-05-08 19:10:51 [[32minfo[39m]: khushali joined alert room: 69fde7e2a28f0c1cbe8a49ca
+2026-05-08 19:10:54 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 19:10:55 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [Z-QRjHaWN24DnTr0AAAW]
+2026-05-08 19:10:55 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:10:55 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:11:17 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 19:11:18 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [WRBWms6qjjAoM2soAAAY]
+2026-05-08 19:11:18 [[32minfo[39m]: khushali joined alert room: 69fde7e2a28f0c1cbe8a49ca
+2026-05-08 19:11:18 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 19:11:18 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [nv0meIaUdgKES-_lAAAa]
+2026-05-08 19:11:19 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 19:11:20 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [9_lrIO-6LsiNXTD4AAAe]
+2026-05-08 19:11:20 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:11:20 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:11:22 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 19:11:23 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [WOZC-sx2378yCJ8-AAAg]
+2026-05-08 19:11:23 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 19:11:23 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [bJnpqnRb0f7-Os4RAAAi]
+2026-05-08 19:11:24 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 19:11:25 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [Umr-efUvNaQMMNsTAAAl]
+2026-05-08 19:11:25 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 19:11:25 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 19:11:30 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 19:11:30 [[32minfo[39m]: khushali joined alert room: 69fde80aa28f0c1cbe8a49f5
+2026-05-08 19:11:30 [[32minfo[39m]: khushali joined alert room: 69fde80aa28f0c1cbe8a49f5
+2026-05-08 19:22:43 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 19:22:49 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 19:23:39 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-08 19:29:20 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-08 19:31:02 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-08 20:22:34 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:22:35 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-00.pyhe7cv.mongodb.net
+2026-05-08 20:23:38 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [VVfBYI6sCFF5zM5MAAAC]
+2026-05-08 20:25:41 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:25:41 [[32minfo[39m]: 🔌 Socket connected: harsh (volunteer) [1jSMNciYhQ_pLmHyAAAE]
+2026-05-08 20:25:41 [[32minfo[39m]: ✅ harsh joined active-volunteers room
+2026-05-08 20:25:41 [[32minfo[39m]: harsh marked INACTIVE
+2026-05-08 20:25:41 [[32minfo[39m]: harsh marked INACTIVE
+2026-05-08 20:25:41 [[32minfo[39m]: harsh marked ACTIVE
+2026-05-08 20:25:42 [[32minfo[39m]: harsh marked ACTIVE
+2026-05-08 20:25:46 [[32minfo[39m]: harsh marked INACTIVE
+2026-05-08 20:28:23 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:28:26 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:28:28 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:28:31 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:28:32 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-08 20:28:35 [[32minfo[39m]: 🔌 Socket connected: harsh (volunteer) [gXBKlBofd8LB5_tRAAAB]
+2026-05-08 20:28:35 [[32minfo[39m]: ✅ harsh joined active-volunteers room
+2026-05-08 20:32:04 [[32minfo[39m]: 🔌 Socket disconnected: harsh [client namespace disconnect]
+2026-05-08 20:32:12 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [SjEiQQ8EdHdkYBs_AAAD]
+2026-05-08 20:32:18 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 20:32:18 [[32minfo[39m]: khushali joined alert room: 69fdfaf996c03a4bb627023e
+2026-05-08 20:32:18 [[32minfo[39m]: khushali joined alert room: 69fdfaf996c03a4bb627023e
+2026-05-08 20:33:14 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [lmB6-GQXp-hUd-CEAAAF]
+2026-05-08 20:33:14 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:33:20 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-08 20:33:20 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [N0wM5Q7bdz92bLHeAAAH]
+2026-05-08 20:33:20 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:33:20 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:33:20 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:33:20 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:33:21 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:33:21 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:33:23 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:33:23 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:33:23 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:34:01 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 20:34:02 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [uBrvsRRfEw_cl3TPAAAJ]
+2026-05-08 20:34:02 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:34:02 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [jKVuBBzMbspa8WVTAAAL]
+2026-05-08 20:34:06 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 20:34:07 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [m6aq7XQBaTjq8JvyAAAO]
+2026-05-08 20:34:07 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:34:07 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:34:08 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:34:10 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:34:10 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:34:10 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:34:22 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:34:24 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-08 20:34:24 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [bZaHGSPyjthTPB8SAAAB]
+2026-05-08 20:34:24 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [XSyzbjLh_iyY0jqMAAAD]
+2026-05-08 20:34:24 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:34:25 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:34:25 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:34:30 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 20:34:30 [[32minfo[39m]: khushali joined alert room: 69fdfb7e2a998525f11b91d5
+2026-05-08 20:34:30 [[32minfo[39m]: khushali joined alert room: 69fdfb7e2a998525f11b91d5
+2026-05-08 20:37:37 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:37:38 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-00.pyhe7cv.mongodb.net
+2026-05-08 20:37:38 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [4jX2mmrIMudbOYENAAAB]
+2026-05-08 20:37:41 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [Rk4XwtbtNQpoYOIiAAAD]
+2026-05-08 20:37:41 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:37:41 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:37:41 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:38:04 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 20:38:05 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [7eGHr3O-Trgf8TWaAAAF]
+2026-05-08 20:38:05 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:38:05 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [qNjzk-I_C2l2JPzdAAAH]
+2026-05-08 20:38:05 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 20:38:06 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [0lIR_TgGK_CoJJ6MAAAK]
+2026-05-08 20:38:06 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:38:06 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:38:15 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 20:38:15 [[32minfo[39m]: khushali joined alert room: 69fdfc5e48485270f4390f28
+2026-05-08 20:38:15 [[32minfo[39m]: khushali joined alert room: 69fdfc5e48485270f4390f28
+2026-05-08 20:41:52 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:41:54 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-08 20:41:57 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [xr7L03UN47Fl36j1AAAC]
+2026-05-08 20:41:57 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:41:57 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [bQ-FtckRuog3gVItAAAD]
+2026-05-08 20:41:57 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:41:58 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:42:10 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 20:42:11 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [Jk_I7LS3a0m6pKYHAAAF]
+2026-05-08 20:42:11 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:42:12 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [Yi5QENPJGAZ3YnotAAAH]
+2026-05-08 20:42:14 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 20:42:16 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [C0YiasvkFKpQ_zJlAAAL]
+2026-05-08 20:42:16 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:42:16 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:42:20 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 20:42:20 [[32minfo[39m]: khushali joined alert room: 69fdfd53ed7cd51ee6146642
+2026-05-08 20:42:20 [[32minfo[39m]: khushali joined alert room: 69fdfd53ed7cd51ee6146642
+2026-05-08 20:46:32 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:46:32 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:46:58 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 20:46:59 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [E8fO3hpln95RIAa8AAAN]
+2026-05-08 20:46:59 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:46:59 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [ypztSIvknQHx9N7DAAAP]
+2026-05-08 20:47:02 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 20:47:03 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [Fi9e7Jv5jDOFmDByAAAS]
+2026-05-08 20:47:03 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:47:03 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:47:04 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 20:47:04 [[32minfo[39m]: khushali joined alert room: 69fdfe70ed7cd51ee6146659
+2026-05-08 20:47:04 [[32minfo[39m]: khushali joined alert room: 69fdfe70ed7cd51ee6146659
+2026-05-08 20:48:37 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:48:37 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:49:02 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 20:49:06 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [zvOjEEpU9oegwrzSAAAU]
+2026-05-08 20:49:06 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:49:06 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [mqLkZm6wQCLSuucVAAAW]
+2026-05-08 20:49:08 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-08 20:49:09 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [kRf_-twH_cn-lTZ7AAAZ]
+2026-05-08 20:49:09 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:49:09 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:49:11 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-08 20:49:11 [[32minfo[39m]: khushali joined alert room: 69fdfeefed7cd51ee6146670
+2026-05-08 20:49:11 [[32minfo[39m]: khushali joined alert room: 69fdfeefed7cd51ee6146670
+2026-05-08 20:49:31 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:49:33 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-08 20:49:33 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [G9t28s8VKXqCyHVXAAAB]
+2026-05-08 20:49:33 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-08 20:49:33 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:49:33 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-08 20:49:35 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [Ct7MD4SyzAXfZ4yTAAAD]
+2026-05-08 20:50:29 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-08 20:50:30 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [pOwhLDyAW2BvqPBVAAAF]
+2026-05-08 20:50:31 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-08 20:50:31 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [INKDl2wEOWvmkGu6AAAH]
+2026-05-08 20:50:35 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-08 20:50:38 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-08 20:55:12 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:55:13 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-08 20:55:15 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [eOceAbwIyO41XEyMAAAB]
+2026-05-08 20:57:10 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-08 20:57:12 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-08 20:57:14 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [pvLYJZdzDTTOBSnLAAAB]
+2026-05-09 00:33:35 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 00:33:41 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-09 00:33:59 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 00:34:05 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-09 00:34:15 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 00:34:22 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 00:34:33 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [xjGilybUBS8hI9vnAAAB]
+2026-05-09 00:34:33 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 00:34:35 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [JmB0iq7Vy85M41jmAAAD]
+2026-05-09 00:34:35 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 00:34:37 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [IEsvjT1y4WYJgS7cAAAF]
+2026-05-09 00:34:38 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 00:34:39 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [Bi2AKz8-xUTnD4KxAAAH]
+2026-05-09 00:35:21 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [ttEYuRhGbzBqBNBSAAAK]
+2026-05-09 00:35:21 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 00:35:27 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 00:35:28 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [QpeTVAooNjKfd3ilAAAM]
+2026-05-09 00:35:28 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 00:35:28 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:35:28 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:35:28 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:35:30 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:35:40 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 00:35:40 [[32minfo[39m]: khushali joined alert room: 69fe3401183c222d491a360d
+2026-05-09 00:35:40 [[32minfo[39m]: khushali joined alert room: 69fe3401183c222d491a360d
+2026-05-09 00:35:48 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:35:49 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:35:50 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:35:50 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:35:55 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:35:59 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:35:59 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:35:59 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:36:00 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 00:36:04 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [18ft4QplfBFz8BEdAAAP]
+2026-05-09 00:36:04 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 00:36:04 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:36:08 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:36:10 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:36:10 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:36:10 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:50:08 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:50:08 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:50:08 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:50:08 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:50:15 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 00:50:17 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [ibWyfH5CXlvDSaXcAAAR]
+2026-05-09 00:50:18 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 00:50:19 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [WLNCOvH9Rlx5lS-IAAAT]
+2026-05-09 00:51:11 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 00:51:13 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [eM0YZ0lS5W1JWy5xAAAW]
+2026-05-09 00:51:13 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 00:51:14 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:51:18 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 00:51:18 [[32minfo[39m]: khushali joined alert room: 69fe37ab183c222d491a366c
+2026-05-09 00:51:18 [[32minfo[39m]: khushali joined alert room: 69fe37ab183c222d491a366c
+2026-05-09 00:54:47 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:54:47 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:54:54 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 00:54:55 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [mXpdVO5zQU_AzhDdAAAY]
+2026-05-09 00:54:55 [[32minfo[39m]: khushali joined alert room: 69fe37ab183c222d491a366c
+2026-05-09 00:54:55 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 00:54:55 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [t3dhGiQ54-TtovQCAAAa]
+2026-05-09 00:54:57 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 00:55:00 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [Em0AQ-Kw5fti--6iAAAc]
+2026-05-09 00:55:01 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 00:55:01 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [MRPBpifSjThMGckqAAAe]
+2026-05-09 00:55:02 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 00:55:04 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [hvxjr0qn7rdmaop9AAAh]
+2026-05-09 00:55:04 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 00:55:05 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:55:27 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 00:55:27 [[32minfo[39m]: khushali joined alert room: 69fe38a6183c222d491a3698
+2026-05-09 00:55:27 [[32minfo[39m]: khushali joined alert room: 69fe38a6183c222d491a3698
+2026-05-09 00:57:29 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:57:29 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:57:30 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 00:57:30 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:58:02 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 00:58:04 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [cQ4C4aDMIpHBKJ8fAAAj]
+2026-05-09 00:58:04 [[32minfo[39m]: khushali joined alert room: 69fe38a6183c222d491a3698
+2026-05-09 00:58:04 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 00:58:04 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [9Kfp6EYDaB3NbuZGAAAl]
+2026-05-09 00:58:12 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 00:58:14 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [AA4xsZk1UcQiOCofAAAo]
+2026-05-09 00:58:14 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 00:58:14 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 00:58:30 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 00:58:30 [[32minfo[39m]: khushali joined alert room: 69fe395b183c222d491a36c6
+2026-05-09 00:58:30 [[32minfo[39m]: khushali joined alert room: 69fe395b183c222d491a36c6
+2026-05-09 00:58:39 [[32minfo[39m]: ✅ Alert accepted by Nitin
+2026-05-09 00:58:39 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:02:57 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:02:58 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [rulDUcQTuKPsLeKUAAAr]
+2026-05-09 01:02:58 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:02:58 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:02:58 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 01:02:58 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [vy9goGHtONe6ERkDAAAt]
+2026-05-09 01:02:58 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:02:58 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [75ucrgLWeCh5fqoxAAAw]
+2026-05-09 01:02:59 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 01:02:59 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [wpE6DGvRRg56XigrAAAy]
+2026-05-09 01:03:36 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:03:37 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 01:03:37 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [5JXS6nynqKcLFy48AAA0]
+2026-05-09 01:03:37 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:03:37 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [SFpgfi1pmxQ3d3FTAAA2]
+2026-05-09 01:03:37 [[32minfo[39m]: khushali joined alert room: 69fe395b183c222d491a36c6
+2026-05-09 01:06:09 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 01:08:26 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [n5KUrVz82CRZgHDjAAA4]
+2026-05-09 01:08:26 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:09:41 [[32minfo[39m]: 🔌 Socket disconnected: khushali [client namespace disconnect]
+2026-05-09 01:09:41 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:09:41 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [NeT5jME5LqIjHSAjAAA6]
+2026-05-09 01:09:41 [[32minfo[39m]: khushali joined alert room: 69fe395b183c222d491a36c6
+2026-05-09 01:09:42 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [-7SpMKh3mJ8loBtWAAA9]
+2026-05-09 01:09:42 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:10:24 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 01:10:28 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 01:10:28 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [py7YUA9_D1J2OmKkAAAB]
+2026-05-09 01:10:28 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:10:30 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [sRGoJyCKvQCSMSo6AAAD]
+2026-05-09 01:10:55 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 01:11:22 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:11:22 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [glQvftzAR68MmaMNAAAF]
+2026-05-09 01:11:22 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:11:23 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:11:23 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:11:23 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:11:23 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:11:38 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-09 01:11:57 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 01:13:04 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [RU0IHykt1oajW1UiAAAH]
+2026-05-09 01:13:04 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:13:05 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:13:41 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:13:56 [[32minfo[39m]: ✅ Alert accepted by Nitin
+2026-05-09 01:14:35 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 01:20:21 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [WCaDVJCmsvDqNzOFAAAJ]
+2026-05-09 01:20:21 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:20:22 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:20:53 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:21:22 [[32minfo[39m]: ✅ Alert accepted by Nitin
+2026-05-09 01:26:21 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 01:26:30 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-09 01:26:31 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [AMpRp2uI7RX8IYxeAAAB]
+2026-05-09 01:26:31 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:26:36 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 01:26:36 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:26:37 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:26:58 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:27:45 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [mpT3qEg2yM6MRk6MAAAD]
+2026-05-09 01:27:45 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:27:45 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:27:52 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 01:28:02 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:28:24 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [Rw8-kWd-32JSfNvMAAAF]
+2026-05-09 01:28:24 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:28:24 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:28:38 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:28:45 [[32minfo[39m]: ✅ Alert accepted by Nitin
+2026-05-09 01:33:58 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 01:34:04 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 01:34:05 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [9doOoaiMjCJwv7mOAAAB]
+2026-05-09 01:34:05 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:34:06 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:34:06 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:34:42 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:34:42 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:34:48 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [xtHmFJEqSBd7uuRNAAAD]
+2026-05-09 01:34:48 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:34:48 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:34:52 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 01:35:04 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [pp6l4Oc3iQcR2XtLAAAF]
+2026-05-09 01:35:04 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:35:04 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:35:11 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:35:21 [[32minfo[39m]: ✅ Alert accepted by Nitin
+2026-05-09 01:35:51 [[32minfo[39m]: ❌ Alert 69fe41f39225c115ee852c0e rejected by Nitin
+2026-05-09 01:35:58 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:36:06 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:36:06 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:36:06 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:53:39 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 01:53:50 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-09 01:54:40 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 01:54:45 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-09 01:54:58 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 01:55:02 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-09 01:55:33 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [_RS6uw_Ig6yCChzMAAAB]
+2026-05-09 01:55:33 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:55:33 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:55:44 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 01:56:05 [[32minfo[39m]: ✅ Alert accepted by Nitin. Notified woman and volunteer.
+2026-05-09 01:56:05 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:56:23 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 01:56:24 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [hJGFOjQCBz2n_2vuAAAD]
+2026-05-09 01:56:24 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 01:56:25 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:56:25 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:56:25 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:56:30 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:56:33 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:56:35 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 01:56:35 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 01:56:35 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:03:26 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:03:30 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-00.pyhe7cv.mongodb.net
+2026-05-09 02:04:07 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:04:13 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-01.pyhe7cv.mongodb.net
+2026-05-09 02:04:56 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [KQu8ewwDAiOVoLp5AAAB]
+2026-05-09 02:04:56 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 02:04:57 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:05:03 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 02:05:12 [[32minfo[39m]: ✅ Alert accepted by Nitin. Woman and volunteer notified.
+2026-05-09 02:05:12 [[32minfo[39m]: Nitin joined alert room: 69fe48f4189de0860f719685
+2026-05-09 02:05:13 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:05:19 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 02:05:19 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [mO04ZZTcv-ggVkfHAAAD]
+2026-05-09 02:05:19 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 02:05:19 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:05:19 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:05:19 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:05:22 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:10:59 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 02:11:19 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:11:25 [[33mwarn[39m]: MongoDB disconnected. Attempting reconnect...
+2026-05-09 02:11:30 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:11:37 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 02:12:20 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [SNs-BW_MGOftRWh3AAAB]
+2026-05-09 02:12:21 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 02:12:22 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:12:28 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 1 volunteers
+2026-05-09 02:12:35 [[32minfo[39m]: ✅ Alert accepted by Nitin. Woman and volunteer notified.
+2026-05-09 02:12:35 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:12:42 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 02:12:50 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [LcR2v5sNcRZEtc-vAAAD]
+2026-05-09 02:12:50 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 02:12:51 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:23:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:24 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:29 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:34 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:38 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:43 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:48 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:53 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:23:58 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:03 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:08 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:13 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:24 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:29 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:34 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:38 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:43 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:48 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:53 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:24:58 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:04 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:09 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:13 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:18 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:23 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:28 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:33 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:38 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:43 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:48 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:53 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:25:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:04 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:09 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:14 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:18 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:23 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:28 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:33 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:38 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:44 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:49 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:54 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:26:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:04 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:09 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:14 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:24 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:29 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:34 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:39 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:44 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:49 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:54 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:27:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:04 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:09 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:14 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:24 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:29 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:34 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:39 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:44 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:49 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:54 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:28:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:04 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:09 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:14 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:24 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:29 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:34 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:39 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:44 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:49 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:54 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:29:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:04 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:09 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:14 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:19 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:24 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:29 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:34 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:39 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:42 [[31merror[39m]: 🔴 MongoServerSelectionError: connect ECONNREFUSED 159.41.183.194:27017
+    at Topology.selectServer (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/sdam/topology.js:327:38)
+    at async tryOperation (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:148:18)
+    at async executeOperation (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:78:16)
+    at async FindCursor._initialize (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/find_cursor.js:62:26)
+    at async FindCursor.cursorInit (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/abstract_cursor.js:632:27)
+    at async FindCursor.fetchBatch (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/abstract_cursor.js:666:13)
+    at async FindCursor.next (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/abstract_cursor.js:342:17)
+    at async Collection.findOne (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/collection.js:313:24)
+    at async model.Query._findOne (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/lib/query.js:2710:15)
+    at async model.Query.exec (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/lib/query.js:4627:63)
+2026-05-09 02:30:44 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:47 [[31merror[39m]: 🔴 MongoServerSelectionError: connect ECONNREFUSED 159.41.183.194:27017
+    at Topology.selectServer (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/sdam/topology.js:327:38)
+    at async tryOperation (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:148:18)
+    at async executeOperation (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/operations/execute_operation.js:78:16)
+    at async FindCursor._initialize (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/find_cursor.js:62:26)
+    at async FindCursor.cursorInit (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/abstract_cursor.js:632:27)
+    at async FindCursor.fetchBatch (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/abstract_cursor.js:666:13)
+    at async FindCursor.next (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/cursor/abstract_cursor.js:342:17)
+    at async Collection.findOne (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/node_modules/mongodb/lib/collection.js:313:24)
+    at async model.Query._findOne (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/lib/query.js:2710:15)
+    at async model.Query.exec (/run/media/nitinyadav/Secondary/Debug Womens'Safety/server/node_modules/mongoose/lib/query.js:4627:63)
+2026-05-09 02:30:50 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:30:59 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:31:05 [[31merror[39m]: Location update error: connect ECONNREFUSED 159.41.183.194:27017
+2026-05-09 02:31:10 [[31merror[39m]: Location update error: getaddrinfo EAI_AGAIN ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 02:31:25 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:31:26 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 02:31:26 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [wWTnaI7aHxXw3W9jAAAB]
+2026-05-09 02:31:26 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 02:31:27 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:31:27 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:32:05 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [S4loePky2bS6OywuAAAD]
+2026-05-09 02:32:51 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-09 02:32:51 [[32minfo[39m]: khushali joined alert room: 69fe4f797ebb9843cd8f5b53
+2026-05-09 02:32:51 [[32minfo[39m]: khushali joined alert room: 69fe4f797ebb9843cd8f5b53
+2026-05-09 02:32:56 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 02:33:08 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [bJo6air9rh3-XVWpAAAF]
+2026-05-09 02:33:08 [[32minfo[39m]: ✅ Nitin joined active-volunteers room
+2026-05-09 02:33:08 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:33:25 [[32minfo[39m]: 🔌 Socket disconnected: khushali [transport close]
+2026-05-09 02:33:31 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 0 volunteers
+2026-05-09 02:35:57 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [transport close]
+2026-05-09 02:42:30 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:42:42 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-00.pyhe7cv.mongodb.net
+2026-05-09 02:46:37 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:46:40 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 02:47:02 [[32minfo[39m]: 🛡️ SafeReach server running on port 5000 [development]
+2026-05-09 02:47:07 [[32minfo[39m]: ✅ MongoDB connected: ac-a7tycwz-shard-00-02.pyhe7cv.mongodb.net
+2026-05-09 02:47:32 [[32minfo[39m]: 🔌 Socket connected: khushali (woman) [uLYcacRua1ElRA1UAAAB]
+2026-05-09 02:47:48 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [JQeZLeEr8aMdprlTAAAD]
+2026-05-09 02:47:48 [[32minfo[39m]: ✅ Nitin joined active-volunteers room (isActive: true)
+2026-05-09 02:47:49 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:48:01 [[32minfo[39m]: 🚨 Alert created by khushali. Notified 2 volunteers
+2026-05-09 02:48:01 [[32minfo[39m]: khushali joined alert room: 69fe5307b8482bd3e842d671
+2026-05-09 02:48:01 [[32minfo[39m]: khushali joined alert room: 69fe5307b8482bd3e842d671
+2026-05-09 02:48:07 [[32minfo[39m]: ✅ Alert accepted by Nitin.
+2026-05-09 02:48:07 [[32minfo[39m]: Nitin joined alert room: 69fe5307b8482bd3e842d671
+2026-05-09 02:48:08 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:48:32 [[32minfo[39m]: 🔌 Socket disconnected: Nitin [client namespace disconnect]
+2026-05-09 02:48:33 [[32minfo[39m]: 🔌 Socket connected: Nitin (volunteer) [OgZMCZ-eeBFymxaGAAAF]
+2026-05-09 02:48:33 [[32minfo[39m]: ✅ Nitin joined active-volunteers room (isActive: false)
+2026-05-09 02:48:34 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:48:34 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:48:34 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:48:37 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:48:42 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:48:48 [[32minfo[39m]: Nitin marked ACTIVE
+2026-05-09 02:48:48 [[32minfo[39m]: Nitin marked INACTIVE
+2026-05-09 02:48:48 [[32minfo[39m]: Nitin marked ACTIVE
