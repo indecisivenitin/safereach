@@ -154,7 +154,7 @@ export const SocketProvider = ({
     // ✅ FIX: Only depend on token, NOT user object
     // User object changes shouldn't trigger socket reconnect/disconnect
     // This prevents auto-logout when user details are updated
-  }, [token]);
+  }, [token, user?._id]);
 
   // =====================================================
   // SOCKET HELPERS
@@ -166,22 +166,28 @@ export const SocketProvider = ({
     callback
   ) => {
 
-    if (!socketRef.current) {
+    const socket = socketRef.current;
+
+    // IMPORTANT FIX
+    // must check .connected also
+
+    if (!socket || !socket.connected) {
 
       console.warn(
         `Socket not connected for emit: ${event}`
       );
 
-      return;
+      return false;
     }
 
-    socketRef.current.emit(
+    socket.emit(
       event,
       data,
       callback
     );
-  };
 
+    return true;
+  };
   const on = (
     event,
     handler

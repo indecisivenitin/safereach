@@ -15,6 +15,8 @@
 │   │   │   ├── react.svg
 │   │   │   └── vite.svg
 │   │   ├── components
+│   │   │   ├── auth
+│   │   │   │   └── WebcamCapture.jsx
 │   │   │   ├── BottomNav.jsx
 │   │   │   ├── common
 │   │   │   │   ├── ProtectedRoute.jsx
@@ -36,6 +38,7 @@
 │   │   │   │   ├── Login.jsx
 │   │   │   │   └── Register.jsx
 │   │   │   ├── volunteer
+│   │   │   │   ├── VolunteerAlertActive.jsx
 │   │   │   │   ├── VolunteerHistory.jsx
 │   │   │   │   ├── VolunteerHome.jsx
 │   │   │   │   └── VolunteerProfile.jsx
@@ -49,7 +52,17 @@
 │   │       └── api.js
 │   ├── tailwind.config.js
 │   └── vite.config.js
+├── context code files
+│   ├── api.js
+│   ├── authController.js
+│   ├── auth.js
+│   ├── Register.jsx
+│   └── User.js
+├── context code files.zip
+├── folder structure.txt
 ├── Project Architecture.txt
+├── Safereach Project Handoff And Architecture Summary.pdf
+├── Safereach Technical Approach Ppt Content.pdf
 └── server
     ├── config
     │   ├── db.js
@@ -66,6 +79,7 @@
     ├── middleware
     │   ├── auth.js
     │   ├── errorHandler.js
+    │   ├── upload.js
     │   └── validate.js
     ├── models
     │   ├── Alert.js
@@ -79,6 +93,9 @@
     │   ├── reviews.js
     │   └── volunteers.js
     ├── seed.js
+    ├── services
+    │   ├── aadhaarService.js
+    │   └── nyckelService.js
     ├── socket
     │   └── index.js
     └── utils

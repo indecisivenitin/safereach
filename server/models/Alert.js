@@ -1,5 +1,340 @@
+// const mongoose = require('mongoose');
 
-const mongoose = require('mongoose');
+// const alertSchema = new mongoose.Schema(
+//   {
+//     // =====================================================
+//     // WOMAN WHO CREATED SOS
+//     // =====================================================
+
+//     woman: {
+//       type: mongoose.Schema.Types.ObjectId,
+//       ref: 'User',
+//       required: true,
+//     },
+
+//     // =====================================================
+//     // VOLUNTEER WHO ACCEPTED ALERT
+//     // =====================================================
+
+//     volunteer: {
+//       type: mongoose.Schema.Types.ObjectId,
+//       ref: 'User',
+//       default: null,
+//     },
+
+//     // =====================================================
+//     // WOMAN MESSAGE
+//     // =====================================================
+
+//     message: {
+//       type: String,
+//       trim: true,
+//       maxlength: [200, 'Message cannot exceed 200 characters'],
+//       default: 'SOS! I need immediate help.',
+//     },
+
+//     // =====================================================
+//     // VOLUNTEER RESPONSE MESSAGE
+//     // =====================================================
+
+//     responseMessage: {
+//       type: String,
+//       trim: true,
+//       maxlength: [200, 'Response message cannot exceed 200 characters'],
+//       default: '',
+//     },
+
+//     // =====================================================
+//     // ALERT LOCATION
+//     // =====================================================
+
+//     location: {
+
+//       type: {
+//         type: String,
+//         enum: ['Point'],
+//         default: 'Point',
+//       },
+
+//       coordinates: {
+//         type: [Number], // [longitude, latitude]
+//         required: true,
+
+//         validate: {
+//           validator(value) {
+
+//             return (
+//               Array.isArray(value) &&
+//               value.length === 2 &&
+//               value[0] >= -180 &&
+//               value[0] <= 180 &&
+//               value[1] >= -90 &&
+//               value[1] <= 90
+//             );
+//           },
+
+//           message:
+//             'Coordinates must be [longitude, latitude]',
+//         },
+//       },
+
+//       address: {
+//         type: String,
+//         trim: true,
+//         default: '',
+//       },
+//     },
+
+//     // =====================================================
+//     // ALERT STATUS
+//     // =====================================================
+
+//     status: {
+//       type: String,
+
+//       enum: [
+//         'pending',
+//         'active',
+//         'resolved',
+//         'cancelled',
+//         'expired',
+//       ],
+
+//       default: 'pending',
+//     },
+
+//     // =====================================================
+//     // NOTIFIED VOLUNTEERS
+//     // =====================================================
+
+//     notifiedVolunteers: [
+//       {
+//         type: mongoose.Schema.Types.ObjectId,
+//         ref: 'User',
+//       },
+//     ],
+
+//     // =====================================================
+//     // DECLINED VOLUNTEERS
+//     // =====================================================
+
+//     declinedBy: [
+//       {
+//         type: mongoose.Schema.Types.ObjectId,
+//         ref: 'User',
+//       },
+//     ],
+
+//     // =====================================================
+//     // TIMESTAMPS
+//     // =====================================================
+
+//     acceptedAt: {
+//       type: Date,
+//       default: null,
+//     },
+
+//     resolvedAt: {
+//       type: Date,
+//       default: null,
+//     },
+
+//     cancelledAt: {
+//       type: Date,
+//       default: null,
+//     },
+
+//     // =====================================================
+//     // DISTANCE INFO
+//     // =====================================================
+
+//     distanceToVolunteer: {
+//       type: Number,
+//       default: 0,
+//     },
+
+//     // =====================================================
+//     // REVIEW STATUS
+//     // =====================================================
+
+//     hasReview: {
+//       type: Boolean,
+//       default: false,
+//     },
+
+//     // =====================================================
+//     // LIVE LOCATION TRACKING
+//     // =====================================================
+
+//     volunteerLocationHistory: [
+//       {
+//         coordinates: {
+//           type: [Number], // [lng, lat]
+//           default: [],
+//         },
+
+//         timestamp: {
+//           type: Date,
+//           default: Date.now,
+//         },
+//       },
+//     ],
+
+//     // =====================================================
+//     // CHAT / RESPONSE HISTORY
+//     // =====================================================
+
+//     responseHistory: [
+//       {
+//         sender: {
+//           type: String,
+//           enum: ['woman', 'volunteer'],
+//         },
+
+//         message: {
+//           type: String,
+//           trim: true,
+//         },
+
+//         timestamp: {
+//           type: Date,
+//           default: Date.now,
+//         },
+//       },
+//     ],
+
+//     // =====================================================
+//     // META
+//     // =====================================================
+
+//     priority: {
+//       type: String,
+//       enum: ['normal', 'high', 'critical'],
+//       default: 'high',
+//     },
+
+//     emergencyType: {
+//       type: String,
+//       default: 'general',
+//     },
+//   },
+
+//   {
+//     timestamps: true,
+
+//     toJSON: {
+//       virtuals: true,
+//     },
+
+//     toObject: {
+//       virtuals: true,
+//     },
+//   }
+// );
+
+// // =====================================================
+// // INDEXES
+// // =====================================================
+
+// // Geospatial search
+// alertSchema.index({
+//   location: '2dsphere',
+// });
+
+// // Fast status lookup
+// alertSchema.index({
+//   status: 1,
+//   createdAt: -1,
+// });
+
+// // Woman alert history
+// alertSchema.index({
+//   woman: 1,
+//   status: 1,
+// });
+
+// // Volunteer alert history
+// alertSchema.index({
+//   volunteer: 1,
+//   status: 1,
+// });
+
+// // =====================================================
+// // AUTO EXPIRE PENDING ALERTS
+// // =====================================================
+
+// alertSchema.index(
+//   {
+//     createdAt: 1,
+//   },
+//   {
+//     expireAfterSeconds: 600,
+
+//     partialFilterExpression: {
+//       status: 'pending',
+//     },
+//   }
+// );
+
+// // =====================================================
+// // VIRTUALS
+// // =====================================================
+
+// // Help duration in minutes
+
+// alertSchema.virtual('helpDuration').get(function () {
+
+//   if (
+//     this.acceptedAt &&
+//     this.resolvedAt
+//   ) {
+
+//     return Math.round(
+//       (this.resolvedAt - this.acceptedAt) /
+//       60000
+//     );
+//   }
+
+//   return null;
+// });
+
+// // Whether volunteer assigned
+
+// alertSchema.virtual('isAssigned').get(function () {
+
+//   return !!this.volunteer;
+// });
+
+// // =====================================================
+// // MIDDLEWARE
+// // =====================================================
+
+// // Auto-set resolvedAt
+
+// alertSchema.pre('save', function (next) {
+
+//   if (
+//     this.isModified('status') &&
+//     this.status === 'resolved' &&
+//     !this.resolvedAt
+//   ) {
+
+//     this.resolvedAt = new Date();
+//   }
+
+//   next();
+// });
+
+// // =====================================================
+// // MODEL
+// // =====================================================
+
+// module.exports = mongoose.model(
+//   'Alert',
+//   alertSchema
+// );
+
+const mongoose = require("mongoose");
 
 const alertSchema = new mongoose.Schema(
   {
@@ -9,7 +344,7 @@ const alertSchema = new mongoose.Schema(
 
     woman: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: "User",
       required: true,
     },
 
@@ -19,7 +354,7 @@ const alertSchema = new mongoose.Schema(
 
     volunteer: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: "User",
       default: null,
     },
 
@@ -30,8 +365,8 @@ const alertSchema = new mongoose.Schema(
     message: {
       type: String,
       trim: true,
-      maxlength: [200, 'Message cannot exceed 200 characters'],
-      default: 'SOS! I need immediate help.',
+      maxlength: [200, "Message cannot exceed 200 characters"],
+      default: "SOS! I need immediate help.",
     },
 
     // =====================================================
@@ -41,8 +376,8 @@ const alertSchema = new mongoose.Schema(
     responseMessage: {
       type: String,
       trim: true,
-      maxlength: [200, 'Response message cannot exceed 200 characters'],
-      default: '',
+      maxlength: [200, "Response message cannot exceed 200 characters"],
+      default: "",
     },
 
     // =====================================================
@@ -50,11 +385,10 @@ const alertSchema = new mongoose.Schema(
     // =====================================================
 
     location: {
-
       type: {
         type: String,
-        enum: ['Point'],
-        default: 'Point',
+        enum: ["Point"],
+        default: "Point",
       },
 
       coordinates: {
@@ -63,7 +397,6 @@ const alertSchema = new mongoose.Schema(
 
         validate: {
           validator(value) {
-
             return (
               Array.isArray(value) &&
               value.length === 2 &&
@@ -74,15 +407,14 @@ const alertSchema = new mongoose.Schema(
             );
           },
 
-          message:
-            'Coordinates must be [longitude, latitude]',
+          message: "Coordinates must be [longitude, latitude]",
         },
       },
 
       address: {
         type: String,
         trim: true,
-        default: '',
+        default: "",
       },
     },
 
@@ -93,15 +425,9 @@ const alertSchema = new mongoose.Schema(
     status: {
       type: String,
 
-      enum: [
-        'pending',
-        'active',
-        'resolved',
-        'cancelled',
-        'expired',
-      ],
+      enum: ["pending", "active", "resolved", "cancelled", "expired"],
 
-      default: 'pending',
+      default: "pending",
     },
 
     // =====================================================
@@ -111,7 +437,7 @@ const alertSchema = new mongoose.Schema(
     notifiedVolunteers: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: "User",
       },
     ],
 
@@ -122,7 +448,7 @@ const alertSchema = new mongoose.Schema(
     declinedBy: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
+        ref: "User",
       },
     ],
 
@@ -182,6 +508,38 @@ const alertSchema = new mongoose.Schema(
     ],
 
     // =====================================================
+    // CHAT MESSAGES
+    // =====================================================
+
+    chatMessages: {
+      type: [
+        {
+          sender: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "User",
+          },
+
+          senderRole: {
+            type: String,
+            enum: ["woman", "volunteer"],
+          },
+
+          message: {
+            type: String,
+            trim: true,
+          },
+
+          createdAt: {
+            type: Date,
+            default: Date.now,
+          },
+        },
+      ],
+
+      default: [],
+    },
+
+    // =====================================================
     // CHAT / RESPONSE HISTORY
     // =====================================================
 
@@ -189,7 +547,7 @@ const alertSchema = new mongoose.Schema(
       {
         sender: {
           type: String,
-          enum: ['woman', 'volunteer'],
+          enum: ["woman", "volunteer"],
         },
 
         message: {
@@ -210,13 +568,13 @@ const alertSchema = new mongoose.Schema(
 
     priority: {
       type: String,
-      enum: ['normal', 'high', 'critical'],
-      default: 'high',
+      enum: ["normal", "high", "critical"],
+      default: "high",
     },
 
     emergencyType: {
       type: String,
-      default: 'general',
+      default: "general",
     },
   },
 
@@ -230,7 +588,7 @@ const alertSchema = new mongoose.Schema(
     toObject: {
       virtuals: true,
     },
-  }
+  },
 );
 
 // =====================================================
@@ -239,7 +597,7 @@ const alertSchema = new mongoose.Schema(
 
 // Geospatial search
 alertSchema.index({
-  location: '2dsphere',
+  location: "2dsphere",
 });
 
 // Fast status lookup
@@ -272,9 +630,9 @@ alertSchema.index(
     expireAfterSeconds: 600,
 
     partialFilterExpression: {
-      status: 'pending',
+      status: "pending",
     },
-  }
+  },
 );
 
 // =====================================================
@@ -283,17 +641,9 @@ alertSchema.index(
 
 // Help duration in minutes
 
-alertSchema.virtual('helpDuration').get(function () {
-
-  if (
-    this.acceptedAt &&
-    this.resolvedAt
-  ) {
-
-    return Math.round(
-      (this.resolvedAt - this.acceptedAt) /
-      60000
-    );
+alertSchema.virtual("helpDuration").get(function () {
+  if (this.acceptedAt && this.resolvedAt) {
+    return Math.round((this.resolvedAt - this.acceptedAt) / 60000);
   }
 
   return null;
@@ -301,8 +651,7 @@ alertSchema.virtual('helpDuration').get(function () {
 
 // Whether volunteer assigned
 
-alertSchema.virtual('isAssigned').get(function () {
-
+alertSchema.virtual("isAssigned").get(function () {
   return !!this.volunteer;
 });
 
@@ -312,14 +661,12 @@ alertSchema.virtual('isAssigned').get(function () {
 
 // Auto-set resolvedAt
 
-alertSchema.pre('save', function (next) {
-
+alertSchema.pre("save", function (next) {
   if (
-    this.isModified('status') &&
-    this.status === 'resolved' &&
+    this.isModified("status") &&
+    this.status === "resolved" &&
     !this.resolvedAt
   ) {
-
     this.resolvedAt = new Date();
   }
 
@@ -330,7 +677,4 @@ alertSchema.pre('save', function (next) {
 // MODEL
 // =====================================================
 
-module.exports = mongoose.model(
-  'Alert',
-  alertSchema
-);
+module.exports = mongoose.model("Alert", alertSchema);

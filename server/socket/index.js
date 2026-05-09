@@ -1,7 +1,3 @@
-
-
-
-
 // const jwt = require("jsonwebtoken");
 // const User = require("../models/User");
 // const Alert = require("../models/Alert");
@@ -15,11 +11,9 @@
 //   io.use(async (socket, next) => {
 //     try {
 //       const token = socket.handshake.auth.token;
-
 //       if (!token) return next(new Error("Authentication error: No token provided"));
 
 //       const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
 //       const user = await User.findById(decoded.id).select(
 //         "name role isActive phone averageRating location"
 //       );
@@ -50,33 +44,25 @@
 //     await socket.join(`user:${user._id}`);
 
 //     // =====================================================
-//     // AUTO JOIN VOLUNTEER ROOM IF ACTIVE
+//     // AUTO JOIN VOLUNTEER ROOM
 //     // =====================================================
 
 //     if (user.role && user.role.toLowerCase() === "volunteer") {
-//       // Always join room on connect (for SOS receiving)
 //       await socket.join("active-volunteers");
 //       logger.info(`✅ ${user.name} joined active-volunteers room (isActive: ${user.isActive})`);
 //       console.log("ROOMS:", Array.from(socket.rooms));
 //     }
 
 //     // =====================================================
-//     // VOLUNTEER EVENTS
+//     // VOLUNTEER TOGGLE STATUS
 //     // =====================================================
-
-//     // -----------------------------------------------------
-//     // VOLUNTEER ONLINE/OFFLINE TOGGLE
-//     // Also updates location in DB so geo queries work
-//     // -----------------------------------------------------
 
 //     socket.on("volunteer:toggle-status", async (data, callback) => {
 //       try {
 //         const { isActive, coordinates } = data;
 
-//         // Build update object
 //         const updateObj = { isActive };
 
-//         // FIX: If coordinates sent with toggle, save to DB immediately
 //         if (coordinates && coordinates.length === 2) {
 //           const [lng, lat] = coordinates;
 //           if (lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180) {
@@ -102,7 +88,6 @@
 //         }
 
 //         socket.emit("volunteer:status-updated", { isActive });
-
 //         if (callback) callback({ success: true, isActive });
 //       } catch (err) {
 //         logger.error(`Toggle status error: ${err.message}`);
@@ -125,19 +110,13 @@
 //         if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return;
 
 //         await User.findByIdAndUpdate(user._id, {
-//           location: {
-//             type: "Point",
-//             coordinates,
-//             updatedAt: new Date(),
-//           },
+//           location: { type: "Point", coordinates, updatedAt: new Date() },
 //           lastSeen: new Date(),
 //         });
 
 //         if (alertId) {
 //           await Alert.findByIdAndUpdate(alertId, {
-//             $push: {
-//               volunteerLocationHistory: { coordinates, timestamp: new Date() },
-//             },
+//             $push: { volunteerLocationHistory: { coordinates, timestamp: new Date() } },
 //           });
 
 //           const activeAlert = await Alert.findById(alertId);
@@ -174,9 +153,7 @@
 //         if (!alertId) return;
 
 //         const alert = await Alert.findById(alertId);
-//         if (!alert) {
-//           return socket.emit("app-error", { message: "Alert not found" });
-//         }
+//         if (!alert) return socket.emit("app-error", { message: "Alert not found" });
 
 //         await socket.join(`alert:${alertId}`);
 //         logger.info(`${user.name} joined alert room: ${alertId}`);
@@ -195,21 +172,14 @@
 
 //         console.log(`📨 ALERT:ACCEPT received from ${user.name} for alert ${alertId}`);
 
-//         if (!alertId) {
-//           return callback?.({ success: false, message: "Alert ID missing" });
-//         }
+//         if (!alertId) return callback?.({ success: false, message: "Alert ID missing" });
 
 //         const alert = await Alert.findById(alertId)
-//           .populate("woman", "name phone")
+//           .populate("woman", "name phone _id")
 //           .populate("volunteer", "name phone");
 
-//         if (!alert) {
-//           return callback?.({ success: false, message: "Alert not found" });
-//         }
-
-//         if (alert.status !== "pending") {
-//           return callback?.({ success: false, message: "Alert already accepted" });
-//         }
+//         if (!alert) return callback?.({ success: false, message: "Alert not found" });
+//         if (alert.status !== "pending") return callback?.({ success: false, message: "Alert already accepted" });
 
 //         alert.status = "active";
 //         alert.volunteer = socket.user._id;
@@ -223,12 +193,23 @@
 
 //         await socket.join(`alert:${alertId}`);
 
-//         io.to(`alert:${alertId}`).emit("alert:accepted", {
+//         const payload = {
 //           alertId,
 //           volunteer,
 //           responseMessage: alert.responseMessage,
 //           acceptedAt: alert.acceptedAt,
-//         });
+//         };
+
+//         // =====================================================
+//         // FIX: Emit to BOTH alert room AND woman's personal room
+//         // Alert room = only works if woman already joined it
+//         // Personal room = always works, woman is always in it
+//         // =====================================================
+
+//         io.to(`alert:${alertId}`).emit("alert:accepted", payload);
+//         io.to(`user:${alert.woman._id}`).emit("alert:accepted", payload);  // ← THE FIX
+
+//         console.log(`📢 Emitted alert:accepted to alert:${alertId} AND user:${alert.woman._id}`);
 
 //         socket.emit("alert:accepted-by-you", { alertId, success: true });
 
@@ -277,7 +258,7 @@
 //     });
 
 //     // =====================================================
-//     // SOS CREATE EVENT (Socket-based flow)
+//     // SOS CREATE EVENT
 //     // =====================================================
 
 //     socket.on("sos:create", async (data, callback) => {
@@ -303,16 +284,12 @@
 
 //         await socket.join(`alert:${alert._id}`);
 
-//         // DEBUG
 //         const volunteerSockets = await io.in("active-volunteers").fetchSockets();
 //         console.log("ACTIVE VOLUNTEERS IN ROOM:", volunteerSockets.length);
-//         console.log("SOCKET IDS:", volunteerSockets.map((s) => s.id));
 
-//         // FIX: Also find volunteers in DB by isActive flag (in case location is [0,0])
 //         const dbVolunteers = await User.find({ role: "volunteer", isActive: true }).select("_id").lean();
 //         console.log("DB ACTIVE VOLUNTEERS:", dbVolunteers.length);
 
-//         // Broadcast to socket room
 //         io.to("active-volunteers").emit("new-sos-alert", {
 //           alertId: alert._id,
 //           woman: { id: user._id, name: user.name },
@@ -321,7 +298,6 @@
 //           createdAt: alert.createdAt,
 //         });
 
-//         // Also emit to each volunteer's personal room (belt + suspenders)
 //         for (const vol of dbVolunteers) {
 //           io.to(`user:${vol._id}`).emit("new-sos-alert", {
 //             alertId: alert._id,
@@ -332,9 +308,7 @@
 //           });
 //         }
 
-//         logger.info(
-//           `🚨 SOS created by ${user.name}. Room volunteers: ${volunteerSockets.length}, DB volunteers: ${dbVolunteers.length}`
-//         );
+//         logger.info(`🚨 SOS created by ${user.name}. Room: ${volunteerSockets.length}, DB: ${dbVolunteers.length}`);
 
 //         callback({
 //           success: true,
@@ -361,7 +335,6 @@
 
 //     socket.on("disconnect", async (reason) => {
 //       logger.info(`🔌 Socket disconnected: ${user.name} [${reason}]`);
-
 //       if (user.role && user.role.toLowerCase() === "volunteer") {
 //         await User.findByIdAndUpdate(user._id, { lastSeen: new Date() }).catch(() => {});
 //       }
@@ -379,11 +352,6 @@
 
 // module.exports = initSocket;
 
-
-
-
-
-
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const Alert = require("../models/Alert");
@@ -397,11 +365,12 @@ const initSocket = (io) => {
   io.use(async (socket, next) => {
     try {
       const token = socket.handshake.auth.token;
-      if (!token) return next(new Error("Authentication error: No token provided"));
+      if (!token)
+        return next(new Error("Authentication error: No token provided"));
 
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
       const user = await User.findById(decoded.id).select(
-        "name role isActive phone averageRating location"
+        "name role isActive phone averageRating location",
       );
 
       if (!user) return next(new Error("Authentication error: User not found"));
@@ -421,7 +390,9 @@ const initSocket = (io) => {
   io.on("connection", async (socket) => {
     const user = socket.user;
 
-    logger.info(`🔌 Socket connected: ${user.name} (${user.role}) [${socket.id}]`);
+    logger.info(
+      `🔌 Socket connected: ${user.name} (${user.role}) [${socket.id}]`,
+    );
 
     // =====================================================
     // PERSONAL ROOM
@@ -435,7 +406,9 @@ const initSocket = (io) => {
 
     if (user.role && user.role.toLowerCase() === "volunteer") {
       await socket.join("active-volunteers");
-      logger.info(`✅ ${user.name} joined active-volunteers room (isActive: ${user.isActive})`);
+      logger.info(
+        `✅ ${user.name} joined active-volunteers room (isActive: ${user.isActive})`,
+      );
       console.log("ROOMS:", Array.from(socket.rooms));
     }
 
@@ -458,7 +431,9 @@ const initSocket = (io) => {
               updatedAt: new Date(),
             };
             updateObj.lastSeen = new Date();
-            console.log(`📍 Volunteer ${user.name} location saved on toggle: ${coordinates}`);
+            console.log(
+              `📍 Volunteer ${user.name} location saved on toggle: ${coordinates}`,
+            );
           }
         }
 
@@ -502,7 +477,9 @@ const initSocket = (io) => {
 
         if (alertId) {
           await Alert.findByIdAndUpdate(alertId, {
-            $push: { volunteerLocationHistory: { coordinates, timestamp: new Date() } },
+            $push: {
+              volunteerLocationHistory: { coordinates, timestamp: new Date() },
+            },
           });
 
           const activeAlert = await Alert.findById(alertId);
@@ -539,7 +516,8 @@ const initSocket = (io) => {
         if (!alertId) return;
 
         const alert = await Alert.findById(alertId);
-        if (!alert) return socket.emit("app-error", { message: "Alert not found" });
+        if (!alert)
+          return socket.emit("app-error", { message: "Alert not found" });
 
         await socket.join(`alert:${alertId}`);
         logger.info(`${user.name} joined alert room: ${alertId}`);
@@ -556,16 +534,24 @@ const initSocket = (io) => {
       try {
         const { alertId, responseMessage } = data;
 
-        console.log(`📨 ALERT:ACCEPT received from ${user.name} for alert ${alertId}`);
+        console.log(
+          `📨 ALERT:ACCEPT received from ${user.name} for alert ${alertId}`,
+        );
 
-        if (!alertId) return callback?.({ success: false, message: "Alert ID missing" });
+        if (!alertId)
+          return callback?.({ success: false, message: "Alert ID missing" });
 
         const alert = await Alert.findById(alertId)
           .populate("woman", "name phone _id")
           .populate("volunteer", "name phone");
 
-        if (!alert) return callback?.({ success: false, message: "Alert not found" });
-        if (alert.status !== "pending") return callback?.({ success: false, message: "Alert already accepted" });
+        if (!alert)
+          return callback?.({ success: false, message: "Alert not found" });
+        if (alert.status !== "pending")
+          return callback?.({
+            success: false,
+            message: "Alert already accepted",
+          });
 
         alert.status = "active";
         alert.volunteer = socket.user._id;
@@ -574,17 +560,65 @@ const initSocket = (io) => {
         await alert.save();
 
         const volunteer = await User.findById(socket.user._id).select(
-          "name phone bio skills languages volunteerBio availabilityNote ratings totalAlertsHelped location averageRating"
+          "name phone bio skills languages volunteerBio availabilityNote ratings totalAlertsHelped location averageRating",
         );
 
         await socket.join(`alert:${alertId}`);
 
+        // const payload = {
+        //   alertId,
+        //   volunteer,
+        //   responseMessage: alert.responseMessage,
+        //   acceptedAt: alert.acceptedAt,
+        // };
+
+        // server/socket/index.js
+
+        // ONLY THIS PART CHANGED INSIDE alert:accept
+
         const payload = {
           alertId,
-          volunteer,
+
+          volunteer: {
+            _id: volunteer._id,
+            name: volunteer.name,
+            email: volunteer.email,
+            phone: volunteer.phone,
+            avatar: volunteer.avatar,
+            role: volunteer.role,
+            volunteerBio: volunteer.volunteerBio || "",
+            availabilityNote: volunteer.availabilityNote || "",
+            skills: volunteer.skills || [],
+            languages: volunteer.languages || [],
+            averageRating: volunteer.averageRating || 0,
+            totalAlertsHelped: volunteer.totalAlertsHelped || 0,
+            aadhaarVerified: volunteer.aadhaarVerified || false,
+            aadhaarLast4: volunteer.aadhaarLast4 || "",
+            isActive: volunteer.isActive,
+            location: {
+              coordinates: volunteer.location?.coordinates || [],
+              updatedAt: volunteer.location?.updatedAt || new Date(),
+            },
+          },
+
           responseMessage: alert.responseMessage,
+
           acceptedAt: alert.acceptedAt,
+
+          womanLocation: {
+            coordinates: alert.location.coordinates,
+          },
+
+          volunteerLocation: {
+            coordinates: volunteer.location?.coordinates || [],
+          },
+
+          status: "active",
         };
+
+        io.to(`alert:${alertId}`).emit("alert:accepted", payload);
+
+        io.to(`user:${alert.woman._id}`).emit("alert:accepted", payload);
 
         // =====================================================
         // FIX: Emit to BOTH alert room AND woman's personal room
@@ -593,9 +627,11 @@ const initSocket = (io) => {
         // =====================================================
 
         io.to(`alert:${alertId}`).emit("alert:accepted", payload);
-        io.to(`user:${alert.woman._id}`).emit("alert:accepted", payload);  // ← THE FIX
+        io.to(`user:${alert.woman._id}`).emit("alert:accepted", payload); // ← THE FIX
 
-        console.log(`📢 Emitted alert:accepted to alert:${alertId} AND user:${alert.woman._id}`);
+        console.log(
+          `📢 Emitted alert:accepted to alert:${alertId} AND user:${alert.woman._id}`,
+        );
 
         socket.emit("alert:accepted-by-you", { alertId, success: true });
 
@@ -670,10 +706,17 @@ const initSocket = (io) => {
 
         await socket.join(`alert:${alert._id}`);
 
-        const volunteerSockets = await io.in("active-volunteers").fetchSockets();
+        const volunteerSockets = await io
+          .in("active-volunteers")
+          .fetchSockets();
         console.log("ACTIVE VOLUNTEERS IN ROOM:", volunteerSockets.length);
 
-        const dbVolunteers = await User.find({ role: "volunteer", isActive: true }).select("_id").lean();
+        const dbVolunteers = await User.find({
+          role: "volunteer",
+          isActive: true,
+        })
+          .select("_id")
+          .lean();
         console.log("DB ACTIVE VOLUNTEERS:", dbVolunteers.length);
 
         io.to("active-volunteers").emit("new-sos-alert", {
@@ -694,16 +737,101 @@ const initSocket = (io) => {
           });
         }
 
-        logger.info(`🚨 SOS created by ${user.name}. Room: ${volunteerSockets.length}, DB: ${dbVolunteers.length}`);
+        logger.info(
+          `🚨 SOS created by ${user.name}. Room: ${volunteerSockets.length}, DB: ${dbVolunteers.length}`,
+        );
 
         callback({
           success: true,
           alertId: alert._id,
-          volunteersNotified: Math.max(volunteerSockets.length, dbVolunteers.length),
+          volunteersNotified: Math.max(
+            volunteerSockets.length,
+            dbVolunteers.length,
+          ),
         });
       } catch (err) {
         logger.error(`SOS create error: ${err.message}`);
         callback({ success: false, message: err.message });
+      }
+    });
+
+    // =====================================================
+    // CHAT: SEND MESSAGE
+    // =====================================================
+
+    socket.on("chat:send-message", async (data, callback) => {
+      try {
+        const { alertId, message } = data;
+
+        if (!alertId || !message || message.trim().length === 0) {
+          return callback?.({
+            success: false,
+            message: "Invalid alertId or message",
+          });
+        }
+
+        // Fetch alert
+        const alert = await Alert.findById(alertId);
+
+        if (!alert) {
+          return callback?.({
+            success: false,
+            message: "Alert not found",
+          });
+        }
+
+        // Validate authorization
+        const isAuthorized =
+          alert.woman.toString() === socket.user._id.toString() ||
+          alert.volunteer?.toString() === socket.user._id.toString();
+
+        if (!isAuthorized) {
+          return callback?.({
+            success: false,
+            message: "Unauthorized",
+          });
+        }
+
+        // Validate alert is still active
+        if (!["pending", "active"].includes(alert.status)) {
+          return callback?.({
+            success: false,
+            message: "Alert is no longer active",
+          });
+        }
+
+        // Create message object
+        const newMessage = {
+          sender: socket.user._id,
+          senderRole: socket.user.role,
+          message: message.trim(),
+          createdAt: new Date(),
+        };
+
+        // Add to database
+        alert.chatMessages.push(newMessage);
+        await alert.save();
+
+        // Emit to alert room
+        io.to(`alert:${alertId}`).emit("chat:new-message", {
+          ...newMessage,
+          sender: {
+            _id: socket.user._id,
+            name: socket.user.name,
+          },
+        });
+
+        logger.info(
+          `💬 Chat message from ${socket.user.name} (${socket.user.role}) in alert ${alertId}`,
+        );
+
+        callback?.({ success: true });
+      } catch (err) {
+        logger.error(`Chat send error: ${err.message}`);
+        callback?.({
+          success: false,
+          message: "Failed to send message",
+        });
       }
     });
 
@@ -722,7 +850,9 @@ const initSocket = (io) => {
     socket.on("disconnect", async (reason) => {
       logger.info(`🔌 Socket disconnected: ${user.name} [${reason}]`);
       if (user.role && user.role.toLowerCase() === "volunteer") {
-        await User.findByIdAndUpdate(user._id, { lastSeen: new Date() }).catch(() => {});
+        await User.findByIdAndUpdate(user._id, { lastSeen: new Date() }).catch(
+          () => {},
+        );
       }
     });
 
